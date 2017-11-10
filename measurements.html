@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RSDA: Roof Section Detection Application </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFMRsmxhbbqH4b2DgRfcqiLRe198tgzU0&libraries=places&callback=initAutocomplete">
+    </script>
+    <script src="js/maps.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+        Roof Section Detection Application
+        </a>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container" style="margin">
+        <div class="card" id="staticdaddy">
+          <header class="card-header">
+            <p class="card-header-title">
+            Enter your measurements
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+            <img id="static-map" width="900" src="" alt="">
+            <script>
+            addStaticMap();
+            </script>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item button is-medium is-primary">Continue</a>
+            <a href="#" class="card-footer-item button is-medium" onclick="window.open('index.html', '_self')">Back</a>
+          </footer>
+        </div>
+        <div class="card" id="measurementsdaddy">
+          <header class="card-header">
+            <p class="card-header-title">
+            Measurements
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <div class="field">
+                <div class="control">
+                  <input class="input is-primary" type="text" placeholder="Primary input">
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item button">Add</a>
+            <a href="#" class="card-footer-item button">Delete</a>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
