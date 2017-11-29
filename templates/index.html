@@ -6,12 +6,11 @@
     <title>RSDA: Roof Section Detection Application </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css')}}">
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFMRsmxhbbqH4b2DgRfcqiLRe198tgzU0&libraries=places&callback=initAutocomplete">
     </script>
-    <script src="js/maps.js"></script>
-  </head>
+    <script src="{{ url_for('static', filename='js/maps.js')}}"></script>
   <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
