@@ -58,6 +58,24 @@ html, body {
   font-weight: 300;
 }
 
+.is-text {
+    display: block;
+    width:100%;
+    float:left;
+}
+
+.is-link {
+    display: block;
+    width:100%;
+    float:right;
+}
+
+#measure-container {
+    display: inline-block;
+    float: right;
+    width: 39%;
+}
+
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
@@ -95,5 +113,5 @@ html, body {
 #measurementsdaddy {
   display: inline-block;
   vertical-align: top;
-  width: 30%;
+  width: 100%;
 }

@@ -15,19 +15,15 @@
   <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="http://127.0.0.1:5000" style="font-weight:700">
+        <i class="fa fa-map-o fa-3" aria-hidden="true" style="margin-right: 5px; font-size: 32px;"></i>
         Roof Section Detection Application
         </a>
       </div>
     </nav>
     <section class="section">
-      <div class="container" style="margin">
+      <div class="container" style="margin" id="bigdaddy">
         <div class="card" id="staticdaddy">
-          <header class="card-header">
-            <p class="card-header-title">
-            Enter your measurements
-            </p>
-          </header>
           <div class="card-content">
             <div class="content">
             <img id="static-map" width="900" src="static/img/edges.png" alt="">
@@ -38,31 +34,40 @@
             -->
             </div>
           </div>
-          <footer class="card-footer">
-            <a href="#" class="card-footer-item button is-medium is-primary">Continue</a>
+          <footer class="card-footer" id="staticFooter">
+            <a href="#" class="card-footer-item button is-medium is-primary" onclick="printPage();">Print</a>
             <a href="#" class="card-footer-item button is-medium" onclick="window.open('/', '_self')">Back</a>
           </footer>
         </div>
-        <div class="card" id="measurementsdaddy">
-          <header class="card-header">
-            <p class="card-header-title">
-            Measurements
-            </p>
-          </header>
-          <div class="card-content">
-            <div class="content">
-              <div class="field">
-                <div class="control">
-                  <input class="input is-primary" type="text" placeholder="Primary input">
-                </div>
-              </div>
-            </div>
-          </div>
-          <footer class="card-footer">
-            <a href="#" class="card-footer-item button">Add</a>
-            <a href="#" class="card-footer-item button">Delete</a>
-          </footer>
-        </div>
+            <div id="measure-container">
+                <div class="card" id="measurementsdaddy">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                    Schematic Data
+                    </p>
+                  </header>
+                  <div class="card-content">
+                    <form>
+                      <div class="content">
+                        <div class="field">
+                          <div class="control">
+                            <label class="label">Surveyor Name</label>
+                            <input class="input" type="text" placeholder="John Doe" name="surveyorName"></input><br/>
+                            <label class="label">Measurement Locations & Values</label>
+                            <textarea class="textarea is-primary" type="textarea" placeholder="Roof South Side: 50&#39;6&#34;" name="measurementData"></textarea>
+                            <input name="address" style="display:none;" id="addressInput"></input>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <footer class="card-footer">
+                      <input href="#" class="card-footer-item button is-primary" type="submit" value="Submit" style="padding: 0;" onclick="saveAddress();"></input>
+                      <a href="#" class="card-footer-item button">Cancel</a>
+                    </footer>
+                  </form>
+                
+            <script>showMeasurementElements()</script>
+         </div>
       </div>
     </section>
   </body>
